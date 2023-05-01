@@ -1,7 +1,11 @@
+import os
 import openai
 import gradio
 
-openai.api_key = "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"
+from dotenv import load_dotenv
+load_dotenv()
+
+openai.api_key = os.getenv('API_KEY')
 
 messages = [{"role": "system", "content": "You are an expert in critical cleaning in the industries of medical device manufacturing, pharmaceutical manufacturing, electronic manufacturing, cosmetics manufacturing, food and beverage manufacturing, nuclear cleaning, tattoo equipment, cannabis manufacturing, and precision manufacturing"}]
 
@@ -17,4 +21,4 @@ def CustomChatGPT(user_input):
 
 demo = gradio.Interface(fn=CustomChatGPT, inputs = "text", outputs = "text", title = "Your Critical Cleaning Friend")
 
-demo.launch(share=True)
+demo.launch(share=False)
