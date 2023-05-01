@@ -1,7 +1,7 @@
 import openai
 import gradio
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 messages = [{"role": "system", "content": "You are an expert in critical cleaning in the industries of medical device manufacturing, pharmaceutical manufacturing, electronic manufacturing, cosmetics manufacturing, food and beverage manufacturing, nuclear cleaning, tattoo equipment, cannabis manufacturing, and precision manufacturing"}]
 
